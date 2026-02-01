@@ -1,0 +1,31 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: rabbitmq
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: demo
+    password: demo
+    virtual-host: demo
+
+  # listener:
+  #   simple:
+  #     acknowledge-mode: auto
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ${EMAIL_USERNAME}
+    password: ${EMAIL_PASSWORD}
+    enabled: ${MAIL_ENABLED}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
